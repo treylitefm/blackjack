@@ -1,0 +1,53 @@
+<head>
+	<script type="text/javascript" src="{{ url_for('static', filename='jquery-1.11.3.js') }}"></script>
+	<script type="text/javascript" src="{{ url_for('static', filename='jquery.flip.js') }}"></script>
+	<script type="text/javascript" src="{{ url_for('static', filename='blackjack.js') }}"></script>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+	<div>
+		<span>Let's play some blackjack!</span>
+		<br>
+		<span>Dealer must hit on soft 17 and lower</span>
+	</div>
+	<div id=dealerHand_top>
+		<div id=dealerHand></div>
+		<div id=dealerCardContainer class="hand">
+			<div class="front">
+				<img class="card facedown">
+			</div>
+			<div class="back">
+				<img id=dealerHandCard_1 class="card">
+			</div>
+		</div>
+		<div class="hand">
+			<img id=dealerHandCard_2 class="card">
+		</div>
+	</div>
+	<div class="after-hand">
+		<span id="dealerHandTotal"></span>
+	</div>
+	<div id=playerHand_top>
+		<div id=playerHand></div>
+		<div class="hand">
+			<img id=playerHandCard_1 class="card">
+		</div>
+		<div class="hand">
+			<img id=playerHandCard_2 class="card">
+		</div>
+	</div>
+	<div class="after-hand">Your Total: <span id="playerHandTotal"></span>
+		<div>
+			<button class="btn" id="split">Split</button>
+			<button class="btn" id="double">Double</button>
+			<button class="btn" id="hit">Hit</button>
+			<button class="btn" id="stay">Stay</button>
+		</div>
+		<div>
+			<br>
+			<br>
+			<button class="btn" id="reset">Start</button>
+		</div>
+	</div>
+</body>
